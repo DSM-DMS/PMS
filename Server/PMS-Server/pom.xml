@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.pms</groupId>
+  <artifactId>PMS-Server</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>PMS-Server</name>
+  <url>http://maven.apache.org</url>
+  <modules>
+  	<module>PMS-Server.core</module>
+  	<module>PMS-Server.base</module>
+  </modules>
+</project>
