@@ -1,5 +1,5 @@
 package com.pms.parser;
 
 public abstract class Parser {
-	abstract void parse();
+	public abstract void parse();
 }
