@@ -1,4 +1,4 @@
-package com.dms.parser.support;
+package com.dms.parser.support.school_api;
 
 /**
  * School API
