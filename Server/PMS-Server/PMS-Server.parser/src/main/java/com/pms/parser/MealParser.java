@@ -17,6 +17,7 @@ public class MealParser extends Parser {
 		int year = cal.get(Calendar.YEAR);
 		int month = cal.get(Calendar.MONTH) + 1;
 		int date = cal.get(Calendar.DATE);
+		// 오늘은 몇날몇일일까
 
 		parse(year, month, date);
 
