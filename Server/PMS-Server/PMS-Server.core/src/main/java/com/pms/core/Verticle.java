@@ -5,6 +5,8 @@ import com.pms.base.handlers.LogHandler;
 import com.pms.base.routing.Routing;
 import com.pms.base.util.Config;
 import com.pms.base.util.Log;
+import com.pms.parser.MealParser;
+import com.pms.parser.Parser;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
@@ -21,17 +23,19 @@ public class Verticle extends AbstractVerticle {
 		Router router = Router.router(vertx);
 		int serverPort = Config.getIntValue("serverPort");
 		
-		router.route().handler(BodyHandler.create().setUploadsDirectory("files"));
-		router.route().handler(CookieHandler.create());
-		router.route().handler(SessionHandler.create(LocalSessionStore.create(vertx)));
-		router.route().handler(CORSHandler.create());
-		router.route().handler(LogHandler.create());
-		Routing.route(router, "com.dms.restful");
+//		router.route().handler(BodyHandler.create().setUploadsDirectory("files"));
+//		router.route().handler(CookieHandler.create());
+//		router.route().handler(SessionHandler.create(LocalSessionStore.create(vertx)));
+//		router.route().handler(CORSHandler.create());
+//		router.route().handler(LogHandler.create());
+//		Routing.route(router, "com.dms.restful");
+//		router.route().handler(StaticHandler.create());
 		
-		router.route().handler(StaticHandler.create());
+		Parser mealParser = new MealParser();
+		mealParser.parse();
 		
-		Log.info("Server Started At : " + serverPort);
-		vertx.createHttpServer().requestHandler(router::accept).listen(serverPort);
+//		Log.info("Server Started At : " + serverPort);
+//		vertx.createHttpServer().requestHandler(router::accept).listen(serverPort);
 	}
 	
 	@Override
