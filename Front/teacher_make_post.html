@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PMS</title>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./css/teacher_make_post.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/ckeditor/ckeditor.js"></script>
+</head>
+
+<body>
+    <header id="teacher-header">
+        <div id="teache-title">PMS Teacher</div>
+        <div id="teacher-login">Log in</div>
+    </header>
+
+    <div id="teacher-icons">
+        <div id="teacher-back">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>    
+        </div>
+        <div id="teacher-save">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <!--body-->
+    <div class="card" id="teacher-main">
+        <input id="teacher-input-title" type="text" placeholder="제목 없음">
+        <div id="teacher-input-date">
+            날짜 : 
+            <input type="text" id="teacher-input-year"> 년
+            <input type="text" id="teacher-input-month"> 월
+            <input type="text" id="teacher-input-day"> 일
+        </div>
+        <textarea id="teacher-textarea"></textarea>
+    </div>
+
+    <div class="card" id="teacher-making">
+        <div class="teacher-subjective card" data-no="1">
+            <input type="text" class="teacher-q-title" placeholder="질문 제목">
+        </div>
+    </div>
+    <script src="./js/teacher_make_post.js"></script>
+</body>
+
+</html>
