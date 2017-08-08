@@ -35,6 +35,7 @@ body {
     font-size: 27px;
     display: inline-block;
     width: 30%;
+    cursor: pointer;
 }
 
 #teacher-login {
@@ -42,6 +43,7 @@ body {
     display: inline-block;
     width: 15%;
     float: right;
+    cursor: pointer;
 }
 
 #teacher-icons {
