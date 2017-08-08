@@ -27,7 +27,7 @@ public class Verticle extends AbstractVerticle {
 		router.route().handler(SessionHandler.create(LocalSessionStore.create(vertx)));
 		router.route().handler(CORSHandler.create());
 		router.route().handler(LogHandler.create());
-		Routing.route(router, "com.dms.restful");
+		Routing.route(router, "com.pms.restful");
 		router.route().handler(StaticHandler.create());
 		
 		Thread parser = new Parser();
