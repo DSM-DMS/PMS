@@ -19,17 +19,16 @@ public class MealParser extends Parser {
 		int date = cal.get(Calendar.DATE);
 		// 오늘은 몇날몇일일까
 
-		parse(year, month, date);
+		parse(year, month);
 
 		if (date >= 27) {
 			// 매달 27일에는 다음달 메뉴를 파싱
-			cal.set(year, month, 1);
-			// zero-based numbering이므로 위에서 이미 더해줬으니 그대로 set
-			parse(year, month, date);
+			cal.set(year, month + 1, 1);
+			parse(year, month);
 		}
 	}
 
-	private void parse(int year, int month, int date) {
+	private void parse(int year, int month) {
 		try {
 			List<SchoolMenu> monthlyMenus = School.getMonthlyMenu(year, month);
 			for (int i = 0; i < monthlyMenus.size(); i++) {
