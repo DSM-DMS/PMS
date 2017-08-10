@@ -13,8 +13,69 @@
         <div id="index-title">PMS</div>
         <div id="index-login">Log in</div>
     </header>
-
-    <script src="./js/teacher_make_post.js"></script>
+    <div id="index-sidebar">
+        <div class="card index-sidemenu">잔류확인</div>
+        <div class="card index-sidemenu">학사 일정</div>
+        <div class="card index-sidemenu">게시판</div>
+        <div class="card index-sidemenu">선생님 연락처</div>
+        <div class="card index-sidemenu">학교 건의</div>
+        <div class="card index-sidemenu">급식</div>
+        <hr>
+        <div class="card index-sidemenu">PMS 피드백</div>
+    </div>
+    <div id="index-main">
+        <input type="text" id="index-search" placeholder="검색">
+         <table id="index-meal" cellspacing="20">
+             <tr>
+                <td id="meal-selector" colspan="3" class="card">
+                    <img src="./img/left-arrow.png" id="meal-left" alt="left-arrow">
+                    <span id="meal-date">2017-08-10</span>
+                    <img src="./img/right-arrow.png" id="meal-right" alt="right-arrow">
+                </td>
+                <td rowspan="2" id="meal-picture">
+                </td>
+             </tr>
+            <tr> 
+                <td valign="top" class="card meal-card" id="meal-breakfast">
+                    <div class="meal-text">
+                        밥<br>
+                        국<br>
+                        김치<br>
+                        고기<br>
+                        주스
+                    </div>
+                    <div class="meal-title">
+                        아침
+                    </div>
+                </td>
+                <td valign="top" class="card meal-card" id="meal-lunch">
+                    <div class="meal-text">
+                        밥<br>
+                        국<br>
+                        김치<br>
+                        고기<br>
+                        주스
+                    </div>
+                    <div class="meal-title">
+                        점심
+                    </div>
+                </td>
+                <td valign="top" class="card meal-card" id="diner">
+                    <div class="meal-text">
+                        밥<br>
+                        국<br>
+                        김치<br>
+                        고기<br>
+                        주스
+                    </div>
+                    <div class="meal-title">
+                        저녁
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

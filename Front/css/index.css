@@ -5,6 +5,12 @@ body {
     padding-top: 65px;
 }
 
+.card {
+    background-color: white;
+    box-shadow: 0 1px 10px rgba(190, 190, 190, 1);
+    margin: auto;
+}
+
 /* index 페이지 */
 #index-header {
     background-color: white;
@@ -24,15 +30,103 @@ body {
 
 #index-title {
     font-size: 47px;
-    display: inline-block;
+    float: left;
     width: 30%;
     cursor: pointer;
 }
 
 #index-login {
     font-size: 25px;
-    display: inline-block;
     width: 15%;
     float: right;
     cursor: pointer;
+}
+
+#index-sidebar {
+    color: rgba(150, 150, 150, 1);
+    width: 15%;
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.index-sidemenu {
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    margin: 6px;
+}
+
+#index-main {
+    height: 3000px;
+    padding-left: 25%;
+}
+
+#index-search{
+    margin-top:15px;
+    margin-bottom: 15px;
+    width:80%;
+    height: 35px;
+    font-size: 25px;
+    border: none;
+    background-color:#d4d4d4;
+    border-radius: 15px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+#index-meal {
+    width: 80%;
+}
+
+#meal-selector {
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    font-size: 25px;
+    color: rgba(150, 150, 150, 1);
+    margin-bottom: 15px;
+    width: 70%;
+}
+
+#meal-date {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#meal-left, #meal-right {
+    height: 25px;
+    width: 25px;
+    vertical-align: -3px;
+    margin: auto;
+}
+
+.meal-card {
+    padding: 0;
+    height: 220px;
+}
+
+.meal-text {
+    background-color: rgba(100, 100, 100, 1);
+    height: 80%;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.meal-title {
+    text-align: center;
+    height: 20%;
+    color: rgba(150, 150, 150, 1);
+    font-size: 20px;
+    line-height: 150%;
+}
+
+#meal-picture {
+    background-image: url("../img/test-food.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(190, 190, 190, 1);
 }
