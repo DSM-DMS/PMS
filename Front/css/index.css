@@ -78,7 +78,7 @@ body {
     width:60%;
     padding:0 10 0 10;
 }
-#meal-content p{
+#meal-date{
     padding-top:5px;
     padding-bottom:5px;
     text-align:center;
@@ -88,12 +88,43 @@ body {
     background-color:white;
     box-shadow: 2px 2px 1px;
 }
-#meal-content p span{
+#meal-date span{
     padding-left:15px;
     padding-right:15px;
     padding-bottom:3px;
 }
-#meal-content p img{
+#meal-date img{
     height:20px;
     width:auto;
+}
+#meal-content ul{
+    padding-left:0;
+}
+.meal-schedule{
+    background-color: gray;
+    list-style:none;
+    width:30%;
+    color:white;
+    font-size:13px;
+    float:left;
+}
+#dinner,#lunch{
+    margin-left:5%;
+}
+.meal-when{
+    background-color:white;
+    text-align: center;
+    color: rgba(150, 150, 150, 1);
+    font-weight: bold;
+    padding:5px 0 5px 0;
+    margin-bottom:0;
+}
+#meal-picture{
+    display: inline-block;
+    margin-left:1%;
+    position:absolute;
+}
+#meal-picture img{
+    height:228px;
+    width:200px;
 }
