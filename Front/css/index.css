@@ -125,5 +125,8 @@ body {
 }
 
 #meal-picture {
-    background-color: rgba(100, 100, 100, 1)
+    background-image: url("../img/test-food.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(190, 190, 190, 1);
 }
