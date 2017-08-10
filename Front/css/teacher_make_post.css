@@ -6,12 +6,9 @@ body {
 }
 
 .card {
-    width: 70%;
     background-color: white;
     box-shadow: 0 1px 10px rgba(190, 190, 190, 1);
     margin: auto;
-    padding: 30px;
-    box-sizing: border-box;
 }
 
 /* teacher 페이지 */
@@ -33,14 +30,13 @@ body {
 
 #teacher-title {
     font-size: 27px;
-    display: inline-block;
+    float: left;
     width: 30%;
     cursor: pointer;
 }
 
 #teacher-login {
     font-size: 18px;
-    display: inline-block;
     width: 15%;
     float: right;
     cursor: pointer;
@@ -64,7 +60,10 @@ body {
 }
 
 #teacher-main {
+    width: 70%;
     margin-top: 25px;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
 #teacher-input-title {
@@ -108,11 +107,16 @@ body {
 }
 
 #teacher-making {
+    width: 70%;
     margin-top: 40px;
     padding-top: 40px;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
 .teacher-subjective {
+    padding: 30px;
+    box-sizing: border-box;
     height: 300px;
     width: 100%;
 }

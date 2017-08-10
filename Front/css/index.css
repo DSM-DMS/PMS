@@ -5,6 +5,12 @@ body {
     padding-top: 65px;
 }
 
+.card {
+    background-color: white;
+    box-shadow: 0 1px 10px rgba(190, 190, 190, 1);
+    margin: auto;
+}
+
 /* index 페이지 */
 #index-header {
     background-color: white;
@@ -24,15 +30,36 @@ body {
 
 #index-title {
     font-size: 47px;
-    display: inline-block;
+    float: left;
     width: 30%;
     cursor: pointer;
 }
 
 #index-login {
     font-size: 25px;
-    display: inline-block;
     width: 15%;
     float: right;
     cursor: pointer;
+}
+
+#index-sidebar {
+    color: rgba(150, 150, 150, 1);
+    font-weight: bold;
+    font-size: 20px;
+    width: 15%;
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.index-sidemenu {
+    font-weight: normal;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    margin: 6px;
+}
+
+#index-main {
+    height: 3000px;
 }
