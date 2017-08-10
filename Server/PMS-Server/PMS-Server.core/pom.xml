@@ -69,13 +69,20 @@
 	</build>
 
 	<dependencies>
-		<!-- dms dependency -->
+		<!-- pms dependency -->
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>PMS-Server.base</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		
+
+		<!-- pms dependency -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>PMS-Server.parser</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

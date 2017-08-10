@@ -5,6 +5,7 @@ import com.pms.base.handlers.LogHandler;
 import com.pms.base.routing.Routing;
 import com.pms.base.util.Config;
 import com.pms.base.util.Log;
+import com.pms.parser.Parser;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
@@ -26,9 +27,11 @@ public class Verticle extends AbstractVerticle {
 		router.route().handler(SessionHandler.create(LocalSessionStore.create(vertx)));
 		router.route().handler(CORSHandler.create());
 		router.route().handler(LogHandler.create());
-		Routing.route(router, "com.dms.restful");
-		
+		Routing.route(router, "com.pms.restful");
 		router.route().handler(StaticHandler.create());
+		
+		Thread parser = new Parser();
+		parser.start();
 		
 		Log.info("Server Started At : " + serverPort);
 		vertx.createHttpServer().requestHandler(router::accept).listen(serverPort);
