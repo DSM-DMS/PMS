@@ -44,8 +44,6 @@ body {
 
 #index-sidebar {
     color: rgba(150, 150, 150, 1);
-    font-weight: bold;
-    font-size: 20px;
     width: 15%;
     float: left;
     margin-top: 30px;
@@ -62,38 +60,70 @@ body {
 
 #index-main {
     height: 3000px;
-    padding-left:30%;
+    padding-left: 25%;
 }
+
 #index-search{
-    margin-top:2%;
-    width:78%;
-    height:1%;
-    border:none;
+    margin-top:15px;
+    margin-bottom: 15px;
+    width:80%;
+    height: 35px;
+    font-size: 25px;
+    border: none;
     background-color:#d4d4d4;
     border-radius: 15px;
-    padding-left:5%;
+    padding-left: 50px;
+    box-sizing: border-box;
 }
-#meal-content{
-    display:inline-block;
-    width:60%;
-    padding:0 10 0 10;
+
+#index-meal {
+    width: 80%;
 }
-#meal-content p{
-    padding-top:5px;
-    padding-bottom:5px;
-    text-align:center;
-    line-height:100%;
-    color: rgba(190, 190, 190, 1);
-    font-weight: bold;
-    background-color:white;
-    box-shadow: 2px 2px 1px;
+
+#meal-selector {
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    font-size: 25px;
+    color: rgba(150, 150, 150, 1);
+    margin-bottom: 15px;
+    width: 70%;
 }
-#meal-content p span{
-    padding-left:15px;
-    padding-right:15px;
-    padding-bottom:3px;
+
+#meal-date {
+    margin-left: 50px;
+    margin-right: 50px;
 }
-#meal-content p img{
-    height:20px;
-    width:auto;
+
+#meal-left, #meal-right {
+    height: 25px;
+    width: 25px;
+    vertical-align: -3px;
+    margin: auto;
+}
+
+.meal-card {
+    padding: 0;
+    height: 220px;
+}
+
+.meal-text {
+    background-color: rgba(100, 100, 100, 1);
+    height: 80%;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.meal-title {
+    text-align: center;
+    height: 20%;
+    color: rgba(150, 150, 150, 1);
+    font-size: 20px;
+    line-height: 150%;
+}
+
+#meal-picture {
+    background-color: rgba(100, 100, 100, 1)
 }
