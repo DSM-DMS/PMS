@@ -1,4 +1,4 @@
-package com.pms.restful;
+package com.pms.restful.school_data;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
