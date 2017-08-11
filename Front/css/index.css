@@ -130,3 +130,18 @@ body {
     background-position: center;
     background-color: rgba(190, 190, 190, 1);
 }
+#meal-picture:befor{
+    content:"급식사진";
+}
+#meal-header{
+    font-weight: bold;
+}
+.index-sidemenu:hover{
+    background-color: #d4d4d4;
+}
+#index-board{
+    width:70%;
+}
+#Additional-features{
+    width:30%;
+}
