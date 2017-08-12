@@ -130,18 +130,87 @@ body {
     background-position: center;
     background-color: rgba(190, 190, 190, 1);
 }
-#meal-picture:befor{
-    content:"급식사진";
-}
 #meal-header{
     font-weight: bold;
+    font-size:1.3em;
 }
 .index-sidemenu:hover{
     background-color: #d4d4d4;
 }
+#sub-layout{
+    width:80%;
+}
 #index-board{
-    width:70%;
+    display: block;
+    width:66.4%;
+    margin-left:2.3%;
+    float:left;
 }
 #Additional-features{
-    width:30%;
+    display:block;
+    width:26.4%;
+    margin-left:2.3%;
+    float:left;
+}
+.board{
+    padding:0;
+    margin:0;
+    font-weight: bold;
+    font-size:1.3em;
+}
+.board-content{
+    width:45%;
+    float:left;
+    margin-right:5%;
+}
+.board-kinds{
+    color: rgba(100, 100, 100, 1);
+}
+.board-name{
+    padding:9px 9px 9px 9px;
+    margin:0;
+    font-weight: 600;
+}
+.board-content div{
+    background-color: white;
+    box-shadow: 1px 1px 1.2px;
+}
+.board-content div img{
+    width:100%;
+    height: auto;
+    background-color:black;
+    opacity: 0.9;
+}
+.careers{
+    font-size:10px;
+    color: rgba(100, 100, 100, 1);
+    padding-left:9px;
+    padding-right:9px;
+}
+.post-day{
+    color: rgba(100, 100, 100, 1);
+    font-size:10px;
+    padding-left:9px;
+    padding-bottom:9px;
+}
+.detailed-schedule{
+    padding:9px 9px 9px 9px;
+    background-color: white;
+    color: rgba(100, 100, 100, 1);
+    font-weight: 600;
+    box-shadow: 1px 1px 1.2px;
+}
+#Making-button{
+    padding:9px 9px 9px 9px;
+    background-color: #008c8c;
+    width:100%;
+    height:auto;
+    font-weight: 600;
+    color:white;
+}
+#add{
+    margin-top:15%;
+}
+#sub-layout{
+    margin-top:5%;
 }
