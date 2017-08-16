@@ -28,7 +28,7 @@ public class AddStudent implements Handler<RoutingContext> {
 		try {
 			if(rs.next()) {
 				// 학생 uid 존재
-				MySQL.executeUpdate("INSERT INTO student_links VALUES(?, ?)", id, uid);
+				MySQL.executeUpdate("INSERT INTO student_link VALUES(?, ?)", id, uid);
 				
 				ctx.response().setStatusCode(201).end();
 				ctx.response().close();
