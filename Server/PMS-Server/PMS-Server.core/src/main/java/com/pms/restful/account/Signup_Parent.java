@@ -30,7 +30,7 @@ public class Signup_Parent implements Handler<RoutingContext> {
 			if(rs.next()) {
 				// 학생 uid 존재
 				MySQL.executeUpdate("INSERT INTO account_parent(id, pw) VALUES(?, ?)", id, pw);
-				MySQL.executeUpdate("INSERT INTO student_links VALUES(?, ?)", id, "test");
+				MySQL.executeUpdate("INSERT INTO student_link VALUES(?, ?)", id, "test");
 				
 				ctx.response().setStatusCode(201).end();
 				ctx.response().close();
