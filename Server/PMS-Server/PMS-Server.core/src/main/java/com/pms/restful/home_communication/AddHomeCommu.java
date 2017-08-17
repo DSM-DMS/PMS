@@ -21,11 +21,11 @@ public class AddHomeCommu implements Handler<RoutingContext> {
 		String date = ctx.request().getFormAttribute("date");
 		
 		MySQL.executeUpdate("INSERT INTO home_comm(title, summary, date) VALUES(?, ?, ?)", title, summary, date);
-		ResultSet rs = MySQL.executeQuery("SELECT idx FROM home_comm ORDER BY idx DESC LIMIT 1");
+		ResultSet rs = MySQL.executeQuery("SELECT comm_idx FROM home_comm ORDER BY comm_idx DESC LIMIT 1");
 		try {
 			JSONObject response = new JSONObject();
 			rs.next();
-			response.put("idx", rs.getInt(0));
+			response.put("idx", rs.getInt("comm_idx"));
 			
 			ctx.response().setStatusCode(201);
 			ctx.response().end(response.toString());
