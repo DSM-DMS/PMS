@@ -1,5 +1,10 @@
 package com.pms.restful.home_communication;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.json.JSONObject;
+
 import com.dms.base.db.MySQL;
 import com.pms.base.routing.Route;
 
@@ -16,8 +21,17 @@ public class AddHomeCommu implements Handler<RoutingContext> {
 		String date = ctx.request().getFormAttribute("date");
 		
 		MySQL.executeUpdate("INSERT INTO home_comm(title, summary, date) VALUES(?, ?, ?)", title, summary, date);
-		
-		ctx.response().setStatusCode(201).end();
-		ctx.response().close();
+		ResultSet rs = MySQL.executeQuery("SELECT idx FROM home_comm ORDER BY idx DESC LIMIT 1");
+		try {
+			JSONObject response = new JSONObject();
+			rs.next();
+			response.put("idx", rs.getInt(0));
+			
+			ctx.response().setStatusCode(201);
+			ctx.response().end(response.toString());
+			ctx.response().close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 }
