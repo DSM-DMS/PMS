@@ -1,12 +1,16 @@
 package com.pms.restful.home_communication;
 
 import com.dms.base.db.MySQL;
+import com.pms.base.routing.API;
+import com.pms.base.routing.REST;
 import com.pms.base.routing.Route;
 
 import io.vertx.core.Handler;
 import io.vertx.core.http.HttpMethod;
 import io.vertx.ext.web.RoutingContext;
 
+@API(functionCategory = "가정통신문", summary = "가정통신문에 질문 추가")
+@REST(requestBody = "idx: int, title: String, type: int, content: String", successCode = 201, etc = "idx는 가정통신문 인덱스입니다")
 @Route(uri = "/homecommu/question", method = HttpMethod.POST)
 public class AddQuestion implements Handler<RoutingContext> {
 	@Override

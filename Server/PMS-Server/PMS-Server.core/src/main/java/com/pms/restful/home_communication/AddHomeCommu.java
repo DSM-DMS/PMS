@@ -6,12 +6,16 @@ import java.sql.SQLException;
 import org.json.JSONObject;
 
 import com.dms.base.db.MySQL;
+import com.pms.base.routing.API;
+import com.pms.base.routing.REST;
 import com.pms.base.routing.Route;
 
 import io.vertx.core.Handler;
 import io.vertx.core.http.HttpMethod;
 import io.vertx.ext.web.RoutingContext;
 
+@API(functionCategory = "가정통신문", summary = "가정통신문 추가")
+@REST(requestBody = "title: String, summary: String, date: String", responseBody = "idx: int", successCode = 201)
 @Route(uri = "/homecommu", method = HttpMethod.POST)
 public class AddHomeCommu implements Handler<RoutingContext> {
 	@Override
