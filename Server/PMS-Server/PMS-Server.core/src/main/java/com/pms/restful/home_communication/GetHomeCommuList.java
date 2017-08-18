@@ -26,7 +26,7 @@ public class GetHomeCommuList implements Handler<RoutingContext> {
 		try {
 			while (rs.next()) {
 				JSONObject homeCommu = new JSONObject();
-				homeCommu.put("idx", rs.getInt("comm_idx"));
+				homeCommu.put("idx", rs.getInt("idx"));
 				homeCommu.put("title", rs.getString("title"));
 				homeCommu.put("summary", rs.getString("summary"));
 				homeCommu.put("date", rs.getString("date"));

@@ -21,9 +21,9 @@ public class AddQuestion implements Handler<RoutingContext> {
 		String content = ctx.request().getFormAttribute("content");
 		
 		if(type == 1) {
-			MySQL.executeUpdate("INSERT INTO home_comm_question(comm_idx, question_title, type, question_content) VALUES(?, ?, ?, ?)", commIdx, title, type, content);
+			MySQL.executeUpdate("INSERT INTO home_comm_question(comm_idx, title, type, content) VALUES(?, ?, ?, ?)", commIdx, title, type, content);
 		} else {
-			MySQL.executeUpdate("INSERT INTO home_comm_question(comm_idx, question_title, type, question_choices) VALUES(?, ?, ?, ?)", commIdx, title, type, content);
+			MySQL.executeUpdate("INSERT INTO home_comm_question(comm_idx, title, type, choices) VALUES(?, ?, ?, ?)", commIdx, title, type, content);
 		}
 		
 		ctx.response().setStatusCode(201).end();
