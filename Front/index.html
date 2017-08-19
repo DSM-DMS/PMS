@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link href="./css/index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -14,66 +15,150 @@
         <div id="index-login">Log in</div>
     </header>
     <div id="index-sidebar">
-        <div class="card index-sidemenu">잔류확인</div>
-        <div class="card index-sidemenu">학사 일정</div>
-        <div class="card index-sidemenu">게시판</div>
-        <div class="card index-sidemenu">선생님 연락처</div>
-        <div class="card index-sidemenu">학교 건의</div>
-        <div class="card index-sidemenu">급식</div>
+        <p>메뉴</p>
+        <a href="" class="card-nav">
+            <div class="card index-sidemenu">
+                <i class="material-icons">&#xE53A;</i><span>잔류확인</span>
+            </div>
+        </a>
+        <a href="" class="card-nav">
+            <div class="card index-sidemenu">
+                <i class="material-icons">&#xE916;</i> 학사 일정
+            </div>
+        </a>
+        <a href="" class="card-nav">
+            <div class="card index-sidemenu">
+                <i class="material-icons">&#xE865;</i> 게시판
+            </div>
+        </a>
+        <a href="" class="card-nav">
+            <div class="card index-sidemenu">
+                <i class="material-icons">&#xE0BA;</i> 선생님 연락처
+            </div>
+        </a>
+        <a href="" class="card-nav">
+            <div class="card index-sidemenu">
+                <i class="material-icons">&#xE87F;</i> 학교 건의
+            </div>
+        </a>
+        <a href="" class="card-nav">
+            <div class="card index-sidemenu">
+                <i class="material-icons">&#xE561;</i>급식
+            </div>
+        </a>
         <hr>
-        <div class="card index-sidemenu">PMS 피드백</div>
+        <a href="" class="card-nav">
+            <div class="card index-sidemenu">
+                <i class="material-icons">&#xE160;</i> PMS 피드백
+            </div>
+        </a>
     </div>
     <div id="index-main">
         <input type="text" id="index-search" placeholder="검색">
-         <table id="index-meal" cellspacing="20">
-             <tr>
-                <td id="meal-selector" colspan="3" class="card">
-                    <img src="./img/left-arrow.png" id="meal-left" alt="left-arrow">
-                    <span id="meal-date">2017-08-10</span>
-                    <img src="./img/right-arrow.png" id="meal-right" alt="right-arrow">
-                </td>
-                <td rowspan="2" id="meal-picture">
-                </td>
-             </tr>
-            <tr> 
-                <td valign="top" class="card meal-card" id="meal-breakfast">
-                    <div class="meal-text">
-                        밥<br>
-                        국<br>
-                        김치<br>
-                        고기<br>
-                        주스
+        <div id="school-meal">
+            <table id="index-meal" cellspacing="20">
+                <tr>
+                    <td colspan="3">
+                        <p class="index-text">급식</p>
+                    </td>
+                    <td>
+                        <p class="index-text">급식사진</p>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td id="day-selector" colspan="3" class="card">
+                        <img src="./img/left-arrow.png" id="meal-left" alt="left-arrow">
+                        <span id="meal-date">2017-08-10</span>
+                        <img src="./img/right-arrow.png" id="meal-right" alt="right-arrow">
+                    </td>
+
+                    <td rowspan="2" id="meal-picture">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="card meal-card" id="meal-breakfast">
+                        <div class="meal-text">
+                            밥
+                            <br>국
+                            <br>김치
+                            <br>고기
+                            <br>주스
+                        </div>
+                        <div class="meal-title">
+                            <img class="time_img" src="./img/morning.png" alt=""><span class="time_txt">아침</span>
+                        </div>
+                    </td>
+                    <td class="card meal-card" id="meal-lunch">
+                        <div class="meal-text">
+                            밥
+                            <br>국
+                            <br>김치
+                            <br>고기
+                            <br>주스
+                        </div>
+                        <div class="meal-title">
+                            <img class="time_img" src="./img/noon.png" alt=""><span class="time_txt">점심</span>
+                        </div>
+                    </td>
+                    <td class="card meal-card" id="diner">
+                        <div class="meal-text">
+                            밥
+                            <br>국
+                            <br>김치
+                            <br>고기
+                            <br>주스
+                        </div>
+                        <div class="meal-title">
+                            <img class="time_img" src="./img/moon.png" alt=""><span class="time_txt">저녁</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="sub-layout">
+            <div id="index-board">
+                <p class="board">게시판</p>
+                <div class="board-content">
+                    <p class="board-kinds">가정통신문</p>
+                    <div>
+                        <p class="board-name">청탁 금지법 바로알기:공식적..</p>
+                        <img src="./img/notice.png" alt="가정통신문">
                     </div>
-                    <div class="meal-title">
-                        아침
+                </div>
+                <div class="board-content">
+                    <p class="board-kinds">채용 공고</p>
+                    <div>
+                        <p class="board-name">기간제 교사 채용 공고</p>
+                        <p class="careers">분야 : 국어<br />모집 기간 : 2017.07.25~2017.08.26</p>
+                        <p class="post-day">2017.07.25</p>
                     </div>
-                </td>
-                <td valign="top" class="card meal-card" id="meal-lunch">
-                    <div class="meal-text">
-                        밥<br>
-                        국<br>
-                        김치<br>
-                        고기<br>
-                        주스
+                </div>
+                <div class="board-content">
+                    <p class="board-kinds">가정통신문</p>
+                    <div>
+                        <p class="board-name">청탁 금지법 바로알기:공식적..</p>
+                        <img src="./img/notice.png" alt="가정통신문">
                     </div>
-                    <div class="meal-title">
-                        점심
-                    </div>
-                </td>
-                <td valign="top" class="card meal-card" id="diner">
-                    <div class="meal-text">
-                        밥<br>
-                        국<br>
-                        김치<br>
-                        고기<br>
-                        주스
-                    </div>
-                    <div class="meal-title">
-                        저녁
-                    </div>
-                </td>
-            </tr>
-        </table>
+                </div>
+            </div>
+            <div id="Additional-features">
+                <div id="schedule">
+                    <p class="board">학사 일정</p>
+                    <div class="detailed-schedule">8/1 봉사활동<br /></div>
+                </div>
+                <div id="add">
+                    <p class="board">만들기</p>
+                    <button id="Making-button">가정통신문,설문지</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            Icons made by <a href="https://www.flaticon.com/authors/lucy-g" title="Lucy G">Lucy G</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+                target="_blank">CC 3.0 BY</a>
+        </div>
     </div>
     <script src="./js/index.js"></script>
 </body>
