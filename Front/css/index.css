@@ -1,4 +1,78 @@
 /* 공통 */
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+
+/* Rules for sizing the icon. */
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+
+/* Rules for using icons as black on a light background. */
+
+.material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+
+/* Rules for using icons as white on a dark background. */
+
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
 body {
     background-color: rgba(238, 243, 243, 1);
     margin: 0;
@@ -11,7 +85,9 @@ body {
     margin: auto;
 }
 
+
 /* index 페이지 */
+
 #index-header {
     background-color: white;
     box-shadow: 3px;
@@ -19,8 +95,6 @@ body {
     height: 65px;
     color: rgba(190, 190, 190, 1);
     box-shadow: 0 3px 5px rgba(150, 150, 150, 1);
-    padding-left: 5%;
-    padding-right: 5%;
     line-height: 65px;
     position: fixed;
     z-index: 1;
@@ -31,14 +105,16 @@ body {
 #index-title {
     font-size: 47px;
     float: left;
-    width: 30%;
+    display: inline;
+    margin-left: 5%;
     cursor: pointer;
 }
 
 #index-login {
     font-size: 25px;
-    width: 15%;
+    display: inline-block;
     float: right;
+    margin-right: 5%;
     cursor: pointer;
 }
 
@@ -48,6 +124,11 @@ body {
     float: left;
     margin-top: 30px;
     margin-left: 30px;
+}
+
+.card-nav {
+    text-decoration: none;
+    color: black;
 }
 
 .index-sidemenu {
@@ -63,24 +144,29 @@ body {
     padding-left: 25%;
 }
 
-#index-search{
-    margin-top:15px;
+#index-search {
+    margin-top: 15px;
     margin-bottom: 15px;
-    width:80%;
+    width: 80%;
     height: 35px;
     font-size: 25px;
     border: none;
-    background-color:#d4d4d4;
+    background-color: #d4d4d4;
     border-radius: 15px;
     padding-left: 50px;
     box-sizing: border-box;
+    outline: none;
 }
 
 #index-meal {
     width: 80%;
 }
 
-#meal-selector {
+.index-text {
+    margin: 0;
+}
+
+#day-selector {
     text-align: center;
     height: 35px;
     line-height: 35px;
@@ -95,7 +181,8 @@ body {
     margin-right: 50px;
 }
 
-#meal-left, #meal-right {
+#meal-left,
+#meal-right {
     height: 25px;
     width: 25px;
     vertical-align: -3px;
@@ -104,24 +191,34 @@ body {
 
 .meal-card {
     padding: 0;
-    height: 220px;
+    height: 180px;
 }
 
 .meal-text {
+    font-size: 12px;
     background-color: rgba(100, 100, 100, 1);
     height: 80%;
     box-sizing: border-box;
     padding: 15px;
-    text-align: center;
     color: white;
+    overflow: auto;
 }
 
 .meal-title {
     text-align: center;
-    height: 20%;
     color: rgba(150, 150, 150, 1);
     font-size: 20px;
-    line-height: 150%;
+}
+
+.time_img {
+    width: 30px;
+    margin-top: 7px;
+    margin-left: -7px;
+    margin-right: 7px;
+}
+
+.time_txt {
+    padding-bottom: -7px;
 }
 
 #meal-picture {
@@ -130,87 +227,104 @@ body {
     background-position: center;
     background-color: rgba(190, 190, 190, 1);
 }
-#meal-header{
+
+#meal-header {
     font-weight: bold;
-    font-size:1.3em;
+    font-size: 1.3em;
 }
-.index-sidemenu:hover{
+
+.index-sidemenu:hover {
     background-color: #d4d4d4;
 }
-#sub-layout{
-    width:80%;
+
+#sub-layout {
+    width: 80%;
 }
-#index-board{
+
+#index-board {
     display: block;
-    width:66.4%;
-    margin-left:2.3%;
-    float:left;
+    width: 66.4%;
+    margin-left: 2.3%;
+    float: left;
 }
-#Additional-features{
-    display:block;
-    width:26.4%;
-    margin-left:2.3%;
-    float:left;
+
+#Additional-features {
+    display: block;
+    width: 26.4%;
+    margin-left: 2.3%;
+    float: left;
 }
-.board{
-    padding:0;
-    margin:0;
+
+.board {
+    padding: 0;
+    margin: 0;
     font-weight: bold;
-    font-size:1.3em;
+    font-size: 1.3em;
 }
-.board-content{
-    width:45%;
-    float:left;
-    margin-right:5%;
+
+.board-content {
+    width: 45%;
+    float: left;
+    margin-right: 5%;
 }
-.board-kinds{
+
+.board-kinds {
     color: rgba(100, 100, 100, 1);
 }
-.board-name{
-    padding:9px 9px 9px 9px;
-    margin:0;
+
+.board-name {
+    padding: 9px 9px 9px 9px;
+    margin: 0;
     font-weight: 600;
 }
-.board-content div{
+
+.board-content div {
     background-color: white;
     box-shadow: 1px 1px 1.2px;
 }
-.board-content div img{
-    width:100%;
+
+.board-content div img {
+    width: 100%;
     height: auto;
-    background-color:black;
+    background-color: black;
     opacity: 0.9;
 }
-.careers{
-    font-size:10px;
+
+.careers {
+    font-size: 10px;
     color: rgba(100, 100, 100, 1);
-    padding-left:9px;
-    padding-right:9px;
+    padding-left: 9px;
+    padding-right: 9px;
 }
-.post-day{
+
+.post-day {
     color: rgba(100, 100, 100, 1);
-    font-size:10px;
-    padding-left:9px;
-    padding-bottom:9px;
+    font-size: 10px;
+    padding-left: 9px;
+    padding-bottom: 9px;
 }
-.detailed-schedule{
-    padding:9px 9px 9px 9px;
+
+.detailed-schedule {
+    padding: 9px 9px 9px 9px;
     background-color: white;
     color: rgba(100, 100, 100, 1);
     font-weight: 600;
     box-shadow: 1px 1px 1.2px;
 }
-#Making-button{
-    padding:9px 9px 9px 9px;
+
+#Making-button {
+    padding: 9px 9px 9px 9px;
     background-color: #008c8c;
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: auto;
     font-weight: 600;
-    color:white;
+    color: white;
 }
-#add{
-    margin-top:15%;
+
+#add {
+    margin-top: 15%;
 }
-#sub-layout{
-    margin-top:5%;
+
+#sub-layout {
+    margin-top: 5%;
 }
