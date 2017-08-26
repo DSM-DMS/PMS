@@ -41,7 +41,18 @@
     <div class="card" id="teacher-making">
         <div class="teacher-subjective card" data-no="1">
             <input type="text" class="teacher-q-title" placeholder="질문 제목">
+            <div class="teacher-q-check-answer"> 
+                <input class="teacher-q-cheak-YorN" type="checkbox" name="" value="예">예 <br>
+                <input class="teacher-q-cheak-YorN" type="checkbox" name="" value="아니오"> 아니오 <br>
+            </div>
+            <button type="button" class="button" class="add-q-button" id="button1"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
+        <div class="teacher-subjective card" >
+            <input type="text" class="teacher-q-title" placeholder="질문 제목">
+            <textarea id="teacher-q-contents" rows="" cols="" placeholder="설명"></textarea>
+            <button type="button" class="button" class="add-q-button" id="button2"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </div>
+        <button type="button" class="button" id="add-subjective-card"><i class="fa fa-plus" aria-hidden="true"></i></button>
     </div>
     <script src="./js/teacher_make_post.js"></script>
 </body>
