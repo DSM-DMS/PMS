@@ -69,7 +69,7 @@ body {
 }
 
 #teacher-main {
-    width: 70%;
+    width: 60%;
     margin-top: 25px;
     padding: 30px;
     box-sizing: border-box;
@@ -116,7 +116,7 @@ body {
 }
 
 #teacher-making {
-    width: 70%;
+    width: 60%;
     margin-top: 40px;
     padding-top: 40px;
     padding: 30px;
@@ -129,6 +129,7 @@ body {
     height: 300px;
     width: 100%;
     margin-bottom: 50px;
+    position: relative;
 }
 
 .teacher-q-title {
@@ -146,8 +147,19 @@ body {
     color: rgba(150, 150, 150, 1);
 }
 
-.teacher-q-cheak-YorN {
+.teacher-q-checkbox{
+    display: inline-block;
+    border: 1px solid black;
+
+}
+
+.teacher-q-checkbox:visited{
+
+}
+
+.teacher-q-check-YorN {
     margin: 10px;
+    border: 0;
 }
 
 .teacher-q-check-answer {
@@ -160,30 +172,20 @@ body {
     height: 180px;
 }
 
-.add-q-button {}
-
-#button1 {
+.add-q-button {
     border-radius: 25px;
     background-color: #80cbc4;
     padding: 15px 18px 15px 18px;
     position: absolute;
-    top: 950px;
-    left: 81vw;
+    top: 90%;
+    left: 98%;
 }
 
-#button2 {
-    border-radius: 25px;
-    background-color: #80cbc4;
-    padding: 15px 18px 15px 18px;
-    position: absolute;
-    top: 1300px;
-    left: 81vw;
-}
 
 #add-subjective-card {
     padding: 10px 30px 10px 30px;
     background-color: #80cbc4;
-    margin: auto;
+    display: inline;
 }
 
 #add-subjective-card>i {

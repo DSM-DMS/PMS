@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="./css/teacher_make_post.css" rel="stylesheet">
     <script type="text/javascript" src="./js/ckeditor/ckeditor.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#add-subjective-card").click(function () {
+                $("div").append(" <b>Appended text</b>.");
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -19,7 +27,7 @@
 
     <div id="teacher-icons">
         <div id="teacher-back">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i>    
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
         </div>
         <div id="teacher-save">
             <i class="fa fa-floppy-o" aria-hidden="true"></i>
@@ -30,7 +38,7 @@
     <div class="card" id="teacher-main">
         <input id="teacher-input-title" type="text" placeholder="제목 없음">
         <div id="teacher-input-date">
-            날짜 : 
+            날짜 :
             <input type="text" id="teacher-input-year"> 년
             <input type="text" id="teacher-input-month"> 월
             <input type="text" id="teacher-input-day"> 일
@@ -41,18 +49,26 @@
     <div class="card" id="teacher-making">
         <div class="teacher-subjective card" data-no="1">
             <input type="text" class="teacher-q-title" placeholder="질문 제목">
-            <div class="teacher-q-check-answer"> 
-                <input class="teacher-q-cheak-YorN" type="checkbox" name="" value="예">예 <br>
-                <input class="teacher-q-cheak-YorN" type="checkbox" name="" value="아니오"> 아니오 <br>
+            <div class="teacher-q-check-answer">
+                <div class="teacher-q-checkbox">
+                    a
+                </div>
+                <input class="teacher-q-check-YorN" type="text" name="" value="예">
+                <div class="teacher-q-checkbox">
+                    a
+                </div>
+                <input class="teacher-q-check-YorN" type="text" name="" value="아니오">
             </div>
-            <button type="button" class="button" class="add-q-button" id="button1"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button type="button" class="button add-q-button" class="add-q-button" id="button1"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
-        <div class="teacher-subjective card" >
+        <div class="teacher-subjective card">
             <input type="text" class="teacher-q-title" placeholder="질문 제목">
             <textarea id="teacher-q-contents" rows="" cols="" placeholder="설명"></textarea>
-            <button type="button" class="button" class="add-q-button" id="button2"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button type="button" class="button add-q-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
-        <button type="button" class="button" id="add-subjective-card"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        <div style="text-align: center;">
+            <button type="button" class="button" id="add-subjective-card" onclick="addSubjectiveCard"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </div>
     </div>
     <script src="./js/teacher_make_post.js"></script>
 </body>
