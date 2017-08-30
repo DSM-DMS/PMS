@@ -16,6 +16,7 @@ body {
     outline: 0;
     border: 0;
     color: #ffffff;
+    cursor: pointer;
 }
 
 
@@ -176,9 +177,6 @@ body {
     border-radius: 25px;
     background-color: #80cbc4;
     padding: 15px 18px 15px 18px;
-    position: absolute;
-    top: 90%;
-    left: 98%;
 }
 
 
@@ -190,4 +188,35 @@ body {
 
 #add-subjective-card>i {
     opacity: 0.5;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+}
+
+
+.add-subjective-card-onClick-modal{
+    width: 150px;
+    height: 40px;
+    background-color: #80cbc4;
+}
+
+.add-q{
+    position: absolute;
+    top: 90%;
+    left: 98%;
 }

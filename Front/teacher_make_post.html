@@ -50,21 +50,25 @@
         <div class="teacher-subjective card" data-no="1">
             <input type="text" class="teacher-q-title" placeholder="질문 제목">
             <div class="teacher-q-check-answer">
-                <div class="teacher-q-checkbox">
-                    a
-                </div>
-                <input class="teacher-q-check-YorN" type="text" name="" value="예">
-                <div class="teacher-q-checkbox">
-                    a
-                </div>
-                <input class="teacher-q-check-YorN" type="text" name="" value="아니오">
+                <input type="checkbox"  id="yes" name="" value=""><label for="yes"><span></span>예</label>
+                <input type="checkbox"  id="no" name="" value=""><label for="no"><span></span>아니요</label>
             </div>
-            <button type="button" class="button add-q-button" class="add-q-button" id="button1"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <div class="add-q">
+                <div class="add-subjective-card-onClick-modal">
+            
+                </div>
+                <button type="button" class="button add-q-button" class="add-q-button" id="button1"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
         </div>
         <div class="teacher-subjective card">
             <input type="text" class="teacher-q-title" placeholder="질문 제목">
             <textarea id="teacher-q-contents" rows="" cols="" placeholder="설명"></textarea>
-            <button type="button" class="button add-q-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <div class="add-q">
+                <div class="add-subjective-card-onClick-modal">
+            
+                </div>
+                <button type="button" class="button add-q-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
         </div>
         <div style="text-align: center;">
             <button type="button" class="button" id="add-subjective-card" onclick="addSubjectiveCard"><i class="fa fa-plus" aria-hidden="true"></i></button>
