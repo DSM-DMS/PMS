@@ -177,6 +177,9 @@ body {
     border-radius: 25px;
     background-color: #80cbc4;
     padding: 15px 18px 15px 18px;
+    position: absolute;
+    top: 90%;
+    left: 98%;
 }
 
 
@@ -208,15 +211,11 @@ input[type="checkbox"]:checked + label span {
     background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
 }
 
-
 .add-subjective-card-onClick-modal{
     width: 150px;
     height: 40px;
     background-color: #80cbc4;
-}
-
-.add-q{
     position: absolute;
     top: 90%;
-    left: 98%;
+    left: 83%;
 }

@@ -11,9 +11,24 @@
     <script type="text/javascript" src="./js/ckeditor/ckeditor.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
+        var defaultId = "teacher-subject-card";
+        var modalDefaultId = "modal";
+        var idCount = 0;
+        const YesOrNoHTML='<input type="text" class="teacher-q-title" placeholder="질문 제목"><div class="teacher-q-check-answer"><input type="checkbox" id="yes" name="" value=""><label for="yes"><span></span>예</label><input type="checkbox" id="no" name="" value=""><label for="no"><span></span>아니요</label></div><div class="add-subjective-card-onClick-modal" id="modal1" style="visibility: hidden;"></div><button type="button" class="button add-q-button"><i class="fa fa-plus" aria-hidden="true"></i></button>';
+        function fn_createDynamicId(defaultId) { 
+            idCount++; 
+            return defaultId + idCount;
+        }
         $(document).ready(function () {
             $("#add-subjective-card").click(function () {
-                $("div").append(" <b>Appended text</b>.");
+                var div = document.createElement('div');
+                div.setAttribute('id', fn_createDynamicId(defaultId));
+                div.setAttribute('class', 'teacher-subjective card');
+                div.innerHTML = YesOrNoHTML;
+                $("#teacher-making-contents").append(div);
+            });
+            $('.add-q-button').click(function (event) {
+                
             });
         });
     </script>
@@ -47,31 +62,21 @@
     </div>
 
     <div class="card" id="teacher-making">
-        <div class="teacher-subjective card" data-no="1">
-            <input type="text" class="teacher-q-title" placeholder="질문 제목">
-            <div class="teacher-q-check-answer">
-                <input type="checkbox"  id="yes" name="" value=""><label for="yes"><span></span>예</label>
-                <input type="checkbox"  id="no" name="" value=""><label for="no"><span></span>아니요</label>
-            </div>
-            <div class="add-q">
-                <div class="add-subjective-card-onClick-modal">
-            
+        <div id="teacher-making-contents">
+            <div class="teacher-subjective card" id="teacher-subject-card">
+                <input type="text" class="teacher-q-title" placeholder="질문 제목">
+                <textarea id="teacher-q-contents" rows="" cols="" placeholder="설명"></textarea>
+                <div>
+
                 </div>
-                <button type="button" class="button add-q-button" class="add-q-button" id="button1"><i class="fa fa-plus" aria-hidden="true"></i></button>
-            </div>
-        </div>
-        <div class="teacher-subjective card">
-            <input type="text" class="teacher-q-title" placeholder="질문 제목">
-            <textarea id="teacher-q-contents" rows="" cols="" placeholder="설명"></textarea>
-            <div class="add-q">
-                <div class="add-subjective-card-onClick-modal">
-            
+                <div class="add-subjective-card-onClick-modal" id="modal" style="visibility: hidden;">
+
                 </div>
                 <button type="button" class="button add-q-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
             </div>
         </div>
         <div style="text-align: center;">
-            <button type="button" class="button" id="add-subjective-card" onclick="addSubjectiveCard"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button type="button" class="button" id="add-subjective-card"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </div>
     </div>
     <script src="./js/teacher_make_post.js"></script>
