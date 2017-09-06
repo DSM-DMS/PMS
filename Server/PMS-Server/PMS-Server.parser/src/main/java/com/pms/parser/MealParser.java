@@ -6,9 +6,9 @@ import java.util.List;
 import org.json.JSONArray;
 
 import com.dms.base.db.MySQL;
-import com.dms.parser.support.school_api.School;
-import com.dms.parser.support.school_api.SchoolException;
-import com.dms.parser.support.school_api.SchoolMenu;
+import com.pms.parser.support.school_api.School;
+import com.pms.parser.support.school_api.SchoolException;
+import com.pms.parser.support.school_api.SchoolMenu;
 
 public class MealParser extends Parser {
 	@Override

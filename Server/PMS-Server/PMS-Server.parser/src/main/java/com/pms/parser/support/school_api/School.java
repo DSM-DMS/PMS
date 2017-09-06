@@ -1,4 +1,4 @@
-package com.dms.parser.support.school_api;
+package com.pms.parser.support.school_api;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -4,9 +4,9 @@ import java.util.Calendar;
 import java.util.List;
 
 import com.dms.base.db.MySQL;
-import com.dms.parser.support.school_api.School;
-import com.dms.parser.support.school_api.SchoolException;
-import com.dms.parser.support.school_api.SchoolSchedule;
+import com.pms.parser.support.school_api.School;
+import com.pms.parser.support.school_api.SchoolException;
+import com.pms.parser.support.school_api.SchoolSchedule;
 
 public class ScheduleParser extends Parser {
 	@Override
