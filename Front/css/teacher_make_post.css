@@ -212,10 +212,10 @@ input[type="checkbox"]:checked + label span {
 }
 
 .add-subjective-card-onClick-modal{
-    width: 150px;
-    height: 40px;
+    width: 300px;
+    height: 50px;
     background-color: #80cbc4;
     position: absolute;
-    top: 90%;
-    left: 83%;
+    top: 88%;
+    left: 75%;
 }

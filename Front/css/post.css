@@ -1,0 +1,65 @@
+body{
+    background-color: powderblue;
+    margin: 0;
+    padding: 0;
+}
+
+.post-wrapper{
+    background-color: white;
+    margin-left: 40vw;
+    width: 30vw;
+    height: 700px;
+}
+
+.search-wrapper{
+    width: 30vw;
+    margin: 5vh 0 0 40vw;;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;   
+}
+
+.post-header{
+    height: 5%; 
+    padding: 10px 20px 0 20px;
+}
+
+.post-contents-wrapper{
+    height: 95%;
+}
+.post-contents{
+    padding: 20px;
+    border: 0;
+}
+
+hr{
+    border: 1px solid powderblue;
+    width: 95%;
+    text-align: center;
+}
+
+.post-no{
+    margin-right: 15px;
+}
+
+.post-title{
+    
+}
+
+.post-writer{
+    float:right;
+}
+
+.post-category{
+    margin-left: 40vw;
+    width: 30vw;
+}
+
+.current-category{
+    display: block;
+    margin-top: 0;
+}
+
+p{
+    display: inline-block;
+}

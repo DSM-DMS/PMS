@@ -11,12 +11,13 @@ function fn_createDynamicId(defaultId) { 
 $(document).ready(function () {
     $("#add-subjective-card").click(function () {
         var div = document.createElement('div');
-        div.setAttribute('id', fn_createDynamicId(defaultId));
+        div.setAttribute('data-no', fn_createDynamicId(defaultId));
         div.setAttribute('class', 'teacher-subjective card');
         div.innerHTML = YesOrNoHTML;
         $("#teacher-making-contents").append(div);
     });
     $('.add-q-button').click(function (event) {
-
+        console.log($('#modal'));
+        $('#modal').attr("visibility", "visible");
     });
 });
