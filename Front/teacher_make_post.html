@@ -41,24 +41,16 @@
 
     <div class="card" id="teacher-making">
         <div id="teacher-making-contents">
-            <div class="teacher-subjective card" data-no="teacher-subject-card">
+            <div class="teacher-subjective card" id="teacher-subject-card">
                 <input type="text" class="teacher-q-title" placeholder="질문 제목">
                 <textarea id="teacher-q-contents" rows="" cols="" placeholder="설명"></textarea>
-                <div class="add-subjective-card-onClick-modal" id="modal" style="visibility: visible;">
-                    <div>
-                        <button type="button">주관식</button>
-                    </div>
-                    <div>
-                        <button type="button">객관식</button>
-                    </div>
-                    <div>
-                        
-                    </div>
-                    <div>
-                        <button type="button">필수</button>
-                    </div>
+                <button type="button" class="button add-q-button" id="add-q-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                <div class="add-subjective-card-onClick-modal" id="modal" style="visibility: hidden;">
+                    <div> <button type="button">주관식</button> </div>
+                    <div> <button type="button">객관식</button> </div>
+                    <div> </div>
+                    <div> <button type="button">필수</button> </div>
                 </div>
-                <button type="button" class="button add-q-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
             </div>
         </div>
         <div style="text-align: center;">

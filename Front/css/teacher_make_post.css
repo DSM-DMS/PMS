@@ -178,8 +178,8 @@ body {
     background-color: #80cbc4;
     padding: 15px 18px 15px 18px;
     position: absolute;
-    top: 90%;
-    left: 98%;
+    top: 95%;
+    right: -1%;
 }
 
 
@@ -216,6 +216,14 @@ input[type="checkbox"]:checked + label span {
     height: 50px;
     background-color: #80cbc4;
     position: absolute;
-    top: 88%;
-    left: 75%;
+    right: 5%;
+    top: 95%;
+}
+
+.add-subjective-card-onClick-modal button{
+    display: inline-block;
+    border: 0;
+    float: left;
+    width: 20%;
+    margin: 15px;
 }
